@@ -29,7 +29,7 @@
 </template>
 
 <script>
-    import {mapGetters, mapState} from "vuex";
+    import {mapActions, mapGetters, mapState} from 'vuex';
 
     export default {
         name: 'login-form',
@@ -50,6 +50,17 @@
             ...mapGetters([
                 'hasError'
             ])
+        },
+        methods: {
+            ...mapActions([
+                'login'
+            ]),
+            async onSubmit() {
+                const result = await this.login(this.userId);
+                if (result) {
+                    this.$router.push('chat');
+                }
+            }
         }
     }
 </script>
