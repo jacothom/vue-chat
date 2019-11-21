@@ -11,7 +11,7 @@ export default {
     setReconnect(state, reconnect) {
         state.reconnect = reconnect;
     },
-    sestActiveRoom(state, roomId) {
+    setActiveRoom(state, roomId) {
         state.activeRoom = roomId;
     },
     setRooms(state, rooms) {
