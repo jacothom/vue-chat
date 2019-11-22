@@ -38,7 +38,7 @@
                     this.setReconnect(true);
                 }
             }
-        }, 
+        },
         mounted() {
             window.addEventListener('beforeunload', this.unload);
             if(this.reconnect) {

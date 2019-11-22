@@ -19,7 +19,9 @@
                     <small class="text-muted float-right">{{ message.date }}</small>
                 </div>
             </div>
-
+        </div>
+        <div class="user-typing">
+            <small class="text-muted" v-if="userTyping">@{{ userTyping }} is typing...</small>
         </div>
     </div>
 </template>
@@ -31,7 +33,8 @@
         name: 'message-list',
         computed: {
             ...mapState([
-                'messages'
+                'messages',
+                'userTyping'
             ])
         }
     }
